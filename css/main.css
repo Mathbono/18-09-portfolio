@@ -1,0 +1,268 @@
+@charset "UTF-8";
+* {
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-size: 1.6rem;
+	margin: 0;
+	font-family: 'Bree Serif', serif;
+	line-height: 1.5;
+	background: #f9fafc url(../img/fond.png) repeat top left / contain;
+}
+.clearfix::after {
+	content: '';
+	display: block;
+	clear: both;
+	font-size: 0;
+	margin: 0;
+	padding: 0;
+}
+.repairFlux {
+	clear: both;
+}
+.img-responsive {
+	max-width: 100%;
+	height: auto;
+}
+.tiret::before {
+	content: '- ';
+}
+.tiret::after {
+	content: ' -';
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+p {
+	font-size: 1.8rem;
+}
+a, p, h1 {
+	color: #999a9c;
+}
+h1 {
+	font-size: 4rem;
+}
+h2 {
+	font-size: 3.5rem;
+}
+h3 {
+	font-size: 3rem;
+	color: #f12c5a;
+	text-align: center;
+	border-bottom: #eff0f2 2px solid;
+	padding-bottom: 20px;
+	margin: 130px 25px 15px;
+}
+h4 {
+	color: #f12c5a;
+}
+header {
+	margin: 30px 0 60px;
+}
+header img {
+	display: block;
+	margin:0 auto;
+	transform: scale(0.5);
+
+}
+header img:hover {
+	animation: 0.5s linear 0s 1 alternate forwards running big;
+}
+header nav {
+	font-size: 2rem;
+}
+header h1, header a, header .menu {
+	display: block;
+	text-align: center;
+}
+header a {
+	margin : 15px 0;
+}
+header a:hover {
+	color: #f12c5a;
+	transition: all 1s linear 0s;
+	transform: translateY(10px);
+}
+section#accueil {
+	background: #444444 url(../img/bg_header.png) no-repeat top left / cover;
+	color: white;
+	text-align: center;
+	padding: 120px 20px;
+}
+section#accueil p {
+	color: white;
+	margin-bottom: 70px;
+}
+section#accueil a {
+	background-color: #f12c5a;
+	color: white;
+	padding: 10px;
+	border-radius: 5px;
+}
+.competences, .services {
+	text-align: center;
+}
+.competences img {
+	transform: scale(0.8);
+}
+.competences .number {
+	transform: scale(0.8);
+}
+.competences .langage {
+	transform: scale(1.5);
+}
+.competences .number, .competences .langage {
+	position: relative;
+	bottom: 35px;
+}
+.services .fas, .services .fa-coffee, .services .fa-flask, .services .fa-code {
+	padding: 30px;
+	background-color: #eff0f2;
+	border: #dedfe1 2px solid;
+	border-radius: 50%;
+	color: #979797;
+}
+.services .fas:hover, .services .fa-coffee:hover, .services .fa-flask:hover, .services .fa-code:hover {
+	animation: 0.5s ease-in-out 0s infinite alternate both running bounce;
+}
+.services {
+	margin: 30px;
+}
+.services p {
+	margin-bottom: 100px;
+}
+.realisations {
+	margin: 0 25px;
+}
+.realisations a {
+	position: relative;
+	left: 30px;
+	color: #f12c5a;
+}
+.realisations h4 {
+	margin-top: 30px;
+}
+section#contact {
+	position: relative;
+	bottom: 80px;
+	margin: 0 50px;
+}
+input {
+	font-size: 1.6rem;
+	text-align: center;
+	width: 95%;
+	padding: 10px;
+	border-radius: 20px;
+}
+input + input {
+	margin-top: 20px;
+}
+input.name {
+	background-image:url(../img/bg_form_name.svg);
+	background-position:left;
+	background-repeat:no-repeat;
+	display: block;
+}
+input.mail {
+	background-image:url(../img/bg_form_mail.svg);
+	background-position:left;
+	background-repeat:no-repeat;
+	display: block;
+}
+input.message {
+	background-image:url(../img/bg_form_message.svg);
+	background-position:left;
+	background-repeat:no-repeat;
+	display: block;
+}
+.submit, .reset {
+	padding: 10px;
+	margin-top: 30px;
+	color: white;
+	width: 150px;
+	position: absolute;
+	left: 50%;
+	border-radius: 0;
+	border: 0;
+}
+.submit {
+	background-color: #f12c5a;
+	transform: translateX(-101%);
+}
+.reset {
+	background-color: #989898;
+	transform: translateX(1%);
+}
+footer {
+	text-align: center;
+	margin: 50px 25px 20px;
+}
+footer a {
+	color: #f12c5a;
+}
+@keyframes big {
+	0% {
+		transform: scale(0.5);
+		
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+@keyframes bounce {
+	0% {
+		transform: translateY(15%);
+		
+	}
+	100% {
+		transform: translateY(-20%);
+	}
+}
+@media all and (min-width: 500px){
+	header .menu {
+		display: inline-block;
+		text-align: center;
+		width: 30%;
+	}
+	.right {
+		float: right;
+		margin-left: 15px;
+	}
+	.left {
+		float: left;
+		margin-right: 15px;
+	}
+	input.name, input.mail {
+		display: inline-block;
+		width: 49%;
+	}
+	input.message {
+		width: 99%;
+	}
+}
+@media all and (min-width: 1000px){
+	header {
+		position: relative;
+	}
+	header img, header h1, header nav, header .menu {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	header .menu {
+		float: right;
+		width: 15%;
+		margin: 0 40px;
+	}
+	.align {
+		display: inline-block;
+		text-align: center;
+		width: 25%;
+	}
+	.align + .align {
+		margin-left: 50px;
+	}
+}
